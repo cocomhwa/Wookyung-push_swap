@@ -6,7 +6,7 @@
 #    By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/17 19:29:57 by wooshin           #+#    #+#              #
-#    Updated: 2023/01/17 19:37:18 by wooshin          ###   ########.fr        #
+#    Updated: 2023/01/18 21:52:59 by wooshin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,9 @@ CC			= cc
 CFLAGS		= -Wall -Wextra -Werror
 RM			= rm -f
 
-SRCS		= client.c \
+SRCS		= main.c \
+			  list_func1.c \
+			  list_func2.c \
 			  utils.c
 
 PRINTF_PATH	= ./library/ft_printf
