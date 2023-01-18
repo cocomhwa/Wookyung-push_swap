@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 22:15:19 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/17 22:28:26 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/01/18 14:41:20 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ t_list	*ft_lstnew(void *content)
 	if (!newnode)
 		return (0);
 	newnode->content = content;
-	newnode->next = 0;
+	newnode->next = newnode;
+	newnode->previous = newnode;
 	return (newnode);
 }
 
