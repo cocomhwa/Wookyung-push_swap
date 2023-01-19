@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 21:57:28 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/18 17:45:29 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/01/19 11:53:20 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
+void	make_int(int len, int *int_array, char **argv);
 
 #endif

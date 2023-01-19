@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 21:03:49 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/18 21:52:14 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/01/19 12:29:46 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,19 @@ static long	ft_atoi(const char *str)
 	return (result);
 }
 
-int	*make_int(int len, char **argv)
+void	make_int(int len, int *int_array, char **argv)
 {
-	int	*res[len];
 	int	i;
+	long num;
 
 	i = 0;
-	while (i <= len)
+	while (i < len)
 	{
-		res[i] = ft_atoi(argv[i + 1]);
+		num = ft_atoi(argv[i + 1]);
+		if (num > 2147483647 || num < -2147483648)
+			exit(1);
+		int_array[i] = (int)num;
 		i++;
 	}
-	return (res);
+	return ;
 }
