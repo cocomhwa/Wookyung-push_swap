@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 21:57:28 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/19 13:24:28 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/01/19 13:51:52 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include "./library/ft_printf/ft_printf.h"
 
 typedef struct s_list
 {
