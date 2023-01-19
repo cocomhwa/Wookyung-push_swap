@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-long	ft_atoi(const char *str)
+static long	ft_atoi(const char *str)
 {
 	int		i;
 	int		sign;
@@ -39,4 +39,18 @@ long	ft_atoi(const char *str)
 		i++;
 	}
 	return (result);
+}
+
+int	*make_int(int len, char **argv)
+{
+	int	*res[len];
+	int	i;
+
+	i = 0;
+	while (i <= len)
+	{
+		res[i] = ft_atoi(argv[i + 1]);
+		i++;
+	}
+	return (res);
 }
