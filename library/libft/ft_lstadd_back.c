@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 22:06:18 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/19 16:18:42 by wooshin          ###   ########.fr       */
+/*   Created: 2022/08/17 02:18:04 by wooshin           #+#    #+#             */
+/*   Updated: 2022/08/17 03:52:09 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	*int_array;
-
-	int_array = input_check(argc, argv);
-	if (!int_array)
-		print_error("Error\n");
-	return (0);
+	if (*lst == 0)
+		*lst = new;
+	else
+		ft_lstlast(*lst)->next = new;
 }

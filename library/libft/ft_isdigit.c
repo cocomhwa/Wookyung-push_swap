@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 22:06:18 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/19 16:18:42 by wooshin          ###   ########.fr       */
+/*   Created: 2022/07/08 19:20:29 by wooshin           #+#    #+#             */
+/*   Updated: 2022/07/09 22:14:59 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-int	main(int argc, char **argv)
+int	ft_isdigit(int c)
 {
-	int	*int_array;
-
-	int_array = input_check(argc, argv);
-	if (!int_array)
-		print_error("Error\n");
+	if (c >= '0' && c <= '9')
+		return (c);
 	return (0);
 }

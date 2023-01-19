@@ -1,23 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 22:06:18 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/19 16:18:42 by wooshin          ###   ########.fr       */
+/*   Created: 2022/07/08 19:57:31 by wooshin           #+#    #+#             */
+/*   Updated: 2022/07/09 22:17:34 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-int	main(int argc, char **argv)
+int	ft_isascii(int c)
 {
-	int	*int_array;
-
-	int_array = input_check(argc, argv);
-	if (!int_array)
-		print_error("Error\n");
-	return (0);
+	return (c >= 0 && c <= 127);
 }

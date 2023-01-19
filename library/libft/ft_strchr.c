@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 22:06:18 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/19 16:18:42 by wooshin          ###   ########.fr       */
+/*   Created: 2022/07/09 11:27:39 by wooshin           #+#    #+#             */
+/*   Updated: 2022/08/18 09:36:29 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-int	main(int argc, char **argv)
+char	*ft_strchr(const char *s, int c)
 {
-	int	*int_array;
+	int	i;
 
-	int_array = input_check(argc, argv);
-	if (!int_array)
-		print_error("Error\n");
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] == (unsigned char)c)
+			return ((char *)s + i);
+		i++;
+	}
+	if (s[i] == (unsigned char)c)
+		return ((char *)s + i);
 	return (0);
 }

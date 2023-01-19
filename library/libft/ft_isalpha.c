@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 22:06:18 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/19 16:18:42 by wooshin          ###   ########.fr       */
+/*   Created: 2022/07/08 18:00:19 by wooshin           #+#    #+#             */
+/*   Updated: 2022/07/09 21:52:47 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-int	main(int argc, char **argv)
+int	ft_isalpha(int c)
 {
-	int	*int_array;
-
-	int_array = input_check(argc, argv);
-	if (!int_array)
-		print_error("Error\n");
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (c);
 	return (0);
 }

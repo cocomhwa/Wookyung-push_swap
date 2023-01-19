@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 22:06:18 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/19 16:18:42 by wooshin          ###   ########.fr       */
+/*   Created: 2022/08/17 05:05:28 by wooshin           #+#    #+#             */
+/*   Updated: 2022/08/18 04:55:44 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *))
 {
-	int	*int_array;
+	t_list	*res;
+	t_list	*tmp;
 
-	int_array = input_check(argc, argv);
-	if (!int_array)
-		print_error("Error\n");
-	return (0);
+	if (!lst || !f)
+		return (0);
+	res = 0;
+	while (lst)
+	{
+		tmp = ft_lstnew(f(lst->content));
+		if (!tmp)
+		{
+			ft_lstclear(&res, del);
+			return (0);
+		}
+		ft_lstadd_back(&res, tmp);
+		tmp = tmp->next;
+		lst = lst->next;
+	}
+	return (res);
 }

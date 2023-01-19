@@ -6,20 +6,22 @@
 #    By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/17 19:29:57 by wooshin           #+#    #+#              #
-#    Updated: 2023/01/18 21:52:59 by wooshin          ###   ########.fr        #
+#    Updated: 2023/01/19 16:21:39 by wooshin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= push_swap
 CC			= cc
-CFLAGS		= -Wall -Wextra -Werror
+CFLAGS		= -g -Wall -Wextra -Werror
 RM			= rm -f
 
 SRCS		= main.c \
-			  list_func1.c \
+			  utils.c \
+			  input_check.c
+#			  list_func1.c \
 			  list_func2.c \
-			  utils.c
 
+LIBFT_PATH	= ./library/libft
 PRINTF_PATH	= ./library/ft_printf
 
 OBJS 		= $(SRCS:.c=.o)
@@ -27,9 +29,10 @@ OBJS 		= $(SRCS:.c=.o)
 all : $(NAME)
 
 $(NAME) : $(OBJS)
+	$(MAKE) -C $(LIBFT_PATH) bonus
 	$(MAKE) -C $(PRINTF_PATH)
 	$(CC) $(CFLAGS) \
-		-L$(PRINTF_PATH) -lftprintf \
+		-L$(LIBFT_PATH) -lft -L$(PRINTF_PATH) -lftprintf \
 		$(OBJS) -o $(NAME)
 
 %.o : %.c $(INC)
@@ -38,9 +41,11 @@ $(NAME) : $(OBJS)
 clean :
 	$(RM) $(OBJS)
 	$(MAKE) -C $(PRINTF_PATH) clean
+	$(MAKE) -C $(LIBFT_PATH) clean
 fclean : clean
 	$(RM) $(NAME)
 	$(MAKE) -C $(PRINTF_PATH) fclean
+	$(MAKE) -C $(LIBFT_PATH) clean
 re :
 	make fclean
 	make all

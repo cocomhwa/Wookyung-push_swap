@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 22:06:18 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/19 16:18:42 by wooshin          ###   ########.fr       */
+/*   Created: 2022/07/20 04:11:17 by wooshin           #+#    #+#             */
+/*   Updated: 2022/08/18 12:32:35 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	*int_array;
+	char	*res;
+	size_t	start;
+	size_t	end;
 
-	int_array = input_check(argc, argv);
-	if (!int_array)
-		print_error("Error\n");
-	return (0);
+	start = 0;
+	if (!s1 || !set)
+		return (0);
+	end = ft_strlen(s1);
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	while (end && s1[end - 1] && ft_strchr(set, s1[end - 1]))
+		end--;
+	if (start > end)
+		return (ft_strdup(""));
+	res = ft_substr(s1, start, end - start);
+	return (res);
 }
