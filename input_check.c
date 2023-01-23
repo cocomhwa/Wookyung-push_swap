@@ -6,16 +6,16 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 15:25:20 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/19 16:34:46 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/01/22 22:27:42 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	*free_array(int	**array)
+static int	*free_array(int	*array)
 {
-	free(*array);
-	*array = 0;
+	free(array);
+	array = 0;
 	return (0);
 }
 
@@ -56,6 +56,6 @@ int	*input_check(int argc, char **argv)
 		return (0);
 	free(arrays);
 	if (check_duplication(size, int_array))
-		return (free_array(&int_array));
+		return (free_array(int_array));
 	return (int_array);
 }
