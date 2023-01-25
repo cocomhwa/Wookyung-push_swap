@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 21:03:49 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/19 16:24:40 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/01/25 23:12:26 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	check_duplication(int len, int *int_array)
 	return (0);
 }
 
-int	*make_valid_int(int len, char **argv)
+int	*get_int_array(int len, int is_freeable, char **str_array)
 {
 	int		i;
 	int		*int_array;
@@ -81,7 +81,7 @@ int	*make_valid_int(int len, char **argv)
 		return (0);
 	while (i < len)
 	{
-		num = to_int(argv[i]);
+		num = to_int(str_array[i]);
 		if (num > 2147483647 || num < -2147483648)
 		{
 			free(int_array);
@@ -90,5 +90,7 @@ int	*make_valid_int(int len, char **argv)
 		int_array[i] = (int)num;
 		i++;
 	}
+	if (is_freeable)
+		free_arrays(str_array);
 	return (int_array);
 }

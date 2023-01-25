@@ -6,45 +6,32 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 22:15:19 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/19 12:55:12 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/01/25 21:25:24 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*ft_lstnew(void *content)
+t_node	*new_linked_list(int content)
 {
-	t_list	*newnode;
+	t_node	*newnode;
 
-	newnode = malloc(sizeof(t_list));
+	newnode = malloc(sizeof(t_node));
 	if (!newnode)
 		return (0);
 	newnode->content = content;
-	newnode->next = 0;
-	newnode->previous = 0;
+	newnode->next = newnode;
+	newnode->previous = newnode;
 	return (newnode);
 }
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	lstadd_front(t_node *lst, t_node *new)
 {
-	new->next = *lst;
-	*lst = new;
+	new->next = lst;
+	lst = new;
 }
 
-int	ft_lstsize(t_list *lst)
-{
-	int	count;
-
-	count = 0;
-	while (lst)
-	{
-		lst = lst->next;
-		count++;
-	}
-	return (count);
-}
-
-t_list	*ft_lstlast(t_list *lst)
+t_node	*lstlast(t_node *lst)
 {
 	if (lst)
 		while (lst->next)
@@ -52,10 +39,27 @@ t_list	*ft_lstlast(t_list *lst)
 	return (lst);
 }
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	lstadd_back(int num, t_node *tail)
 {
-	if (*lst == 0)
-		*lst = new;
-	else
-		ft_lstlast(*lst)->next = new;
+	t_node *newnode = malloc(sizeof(t_node));
+
+	newnode->content = num;
+	newnode->next = tail->next;
+	newnode->previous = tail->next;
+	tail->next = newnode;
+	tail->previous = newnode;
+}
+
+t_node *make_stack(int *int_array, int size)
+{
+	int	i;
+
+	i = 0;
+	t_node	*tail = new_linked_list(int_array[i++]);
+	while (i < size)
+	{
+		lstadd_back(int_array[i++], tail);
+		tail = tail->next;
+	}
+	return (tail->next);
 }

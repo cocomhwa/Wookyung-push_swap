@@ -6,21 +6,21 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 22:17:20 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/17 22:22:45 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/01/25 21:01:29 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	lstdelone(t_node *lst, void (*del)(void *))
 {
 	del(lst->content);
 	free(lst);
 }
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	lstclear(t_node **lst, void (*del)(void *))
 {
-	t_list	*tmp;
+	t_node	*tmp;
 
 	while (*lst)
 	{
@@ -31,7 +31,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	*lst = 0;
 }
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+void	lstiter(t_node *lst, void (*f)(void *))
 {
 	while (lst)
 	{
@@ -40,10 +40,10 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	}
 }
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *))
+t_node	*lstmap(t_node *lst, void *(*f)(void *), void(*del)(void *))
 {
-	t_list	*res;
-	t_list	*tmp;
+	t_node	*res;
+	t_node	*tmp;
 
 	if (!lst || !f)
 		return (0);
