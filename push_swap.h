@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 21:57:28 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/25 23:11:21 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/01/25 23:31:46 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ void	lstclear(t_node **lst, void (*del)(void *));
 void	lstiter(t_node *lst, void (*f)(void *));
 void	print_error(char *error_message);
 void	free_arrays(char **str_array);
-int		*get_int_array(int len, int is_freeable, char **arrays);
+void	push_swap(int size, int *int_array);
+int		*get_int_array(int len, int is_freeable, char **str_array);
 int		*is_valid(int argc, int size, int *int_array);
 int		check_duplication(int len, int *int_array);
 int		get_size(char **str_array);
-int		get_int_arr_size(int argc, char **argv);
 char	**get_str_array(int argc, char **argv);
 
 #endif

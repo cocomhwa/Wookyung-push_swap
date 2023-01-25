@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 22:15:19 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/25 21:25:24 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/01/25 23:23:28 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,9 @@ t_node	*lstlast(t_node *lst)
 
 void	lstadd_back(int num, t_node *tail)
 {
-	t_node *newnode = malloc(sizeof(t_node));
+	t_node	*newnode;
 
+	newnode = malloc(sizeof(t_node));
 	newnode->content = num;
 	newnode->next = tail->next;
 	newnode->previous = tail->next;
@@ -50,12 +51,13 @@ void	lstadd_back(int num, t_node *tail)
 	tail->previous = newnode;
 }
 
-t_node *make_stack(int *int_array, int size)
+t_node	*make_stack(int *int_array, int size)
 {
-	int	i;
+	int		i;
+	t_node	*tail;
 
 	i = 0;
-	t_node	*tail = new_linked_list(int_array[i++]);
+	tail = new_linked_list(int_array[i++]);
 	while (i < size)
 	{
 		lstadd_back(int_array[i++], tail);
