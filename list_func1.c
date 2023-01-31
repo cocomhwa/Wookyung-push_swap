@@ -6,62 +6,49 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 22:15:19 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/25 23:23:28 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/01/31 22:05:32 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_node	*new_linked_list(int content)
+t_stack new_linked_list(int content)
 {
 	t_node	*newnode;
+	t_stack	stack;
 
 	newnode = malloc(sizeof(t_node));
 	if (!newnode)
-		return (0);
+		exit(1);
 	newnode->content = content;
 	newnode->next = newnode;
 	newnode->previous = newnode;
-	return (newnode);
+	stack.head = newnode;
+	stack.tail = newnode;
+	return (stack);
 }
 
-void	lstadd_front(t_node *lst, t_node *new)
-{
-	new->next = lst;
-	lst = new;
-}
-
-t_node	*lstlast(t_node *lst)
-{
-	if (lst)
-		while (lst->next)
-			lst = lst->next;
-	return (lst);
-}
-
-void	lstadd_back(int num, t_node *tail)
+void	lstadd_back(int num, t_stack *stack)
 {
 	t_node	*newnode;
 
 	newnode = malloc(sizeof(t_node));
 	newnode->content = num;
-	newnode->next = tail->next;
-	newnode->previous = tail->next;
-	tail->next = newnode;
-	tail->previous = newnode;
+	stack->head->next = newnode;
+	newnode->next = stack->head;
+	newnode->previous = stack->tail;
+	stack->head = newnode;
+	stack->tail->previous = newnode;
 }
 
-t_node	*make_stack(int *int_array, int size)
+t_stack make_stack(int *int_array, int size)
 {
 	int		i;
-	t_node	*tail;
+	t_stack	stack;
 
 	i = 0;
-	tail = new_linked_list(int_array[i++]);
+	stack = new_linked_list(int_array[i++]);
 	while (i < size)
-	{
-		lstadd_back(int_array[i++], tail);
-		tail = tail->next;
-	}
-	return (tail->next);
+		lstadd_back(int_array[i++], &stack);
+	return (stack);
 }
