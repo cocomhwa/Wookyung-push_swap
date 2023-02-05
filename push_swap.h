@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 21:57:28 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/31 20:48:10 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/05 17:19:40 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,23 +20,23 @@
 
 typedef struct s_node
 {
-	int				content;
-	struct s_node	*next;
-	struct s_node	*previous;
+	int				num;
+	struct s_node	*up;
+	struct s_node	*down;
 }					t_node;
 
 typedef struct s_stack
 {
-	t_node	*head;
-	t_node	*tail;
+	t_node	*bottom;
+	t_node	*top;
 }				t_stack;
 
 t_node	*lstlast(t_node *lst);
 t_node	*lstmap(t_node *lst, void *(*f)(void *), void(*del)(void *));
-t_stack new_linked_list(int content);
+t_stack new_stack(int num);
 t_stack make_stack(int *int_array, int size);
 int		lstsize(t_node *lst);
-void	lstadd_back(int num, t_stack *stack);
+void	append(int num, t_stack *stack);
 void	lstdelone(t_node *lst, void (*del)(void *));
 void	lstclear(t_node **lst, void (*del)(void *));
 void	lstiter(t_node *lst, void (*f)(void *));

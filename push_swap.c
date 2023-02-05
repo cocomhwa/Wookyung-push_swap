@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:31:03 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/31 21:30:34 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/05 18:01:03 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 void	push_swap(int size, int *int_array)
 {
-	t_stack	a;
-	t_stack	b;
+	int	i;
+	int	*array;
 
-	a = make_stack(int_array, size);
+	i = size;
+	array = int_array;
+	return ;
 }
