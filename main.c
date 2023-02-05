@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 22:06:18 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/05 18:04:10 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/05 21:34:59 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	print_stack(t_stack stack)
 {
 	t_node	*node;
-	
+
 	node = stack.top;
 	do
 	{
