@@ -6,7 +6,7 @@
 #    By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/17 19:29:57 by wooshin           #+#    #+#              #
-#    Updated: 2023/02/05 18:03:19 by wooshin          ###   ########.fr        #
+#    Updated: 2023/02/07 01:58:37 by wooshin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,11 @@ SRCS		= main.c \
 			  utils2.c \
 			  push_swap.c \
 			  list_func1.c \
-			  input_check.c
-#			  list_func2.c \
+			  input_check.c \
+			  operation.c \
+			  rotate.c \
+			  swap.c \
+			  push.c
 
 LIBFT_PATH	= ./library/libft
 PRINTF_PATH	= ./library/ft_printf
