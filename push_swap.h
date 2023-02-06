@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 21:57:28 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/05 17:19:40 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/06 20:43:10 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void	lstiter(t_node *lst, void (*f)(void *));
 void	print_error(char *error_message);
 void	free_arrays(char **str_array);
 void	push_swap(int size, int *int_array);
+void	*ft_nullguard(void *content);
 int		*get_int_array(int len, int is_freeable, char **str_array);
 int		*is_valid(int argc, int size, int *int_array);
 int		check_duplication(int len, int *int_array);

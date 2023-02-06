@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 22:15:19 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/05 21:34:14 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/06 20:42:29 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ t_stack	make_stack(int *int_array, int size)
 	int		i;
 	t_stack	stack;
 
-	i = size - 1;
-	stack = new_stack(int_array[i]);
+	i = size;
+	stack = new_stack(int_array[--i]);
 	while (--i >= 0)
 		append(int_array[i], &stack);
 	return (stack);
