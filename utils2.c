@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 14:57:35 by wooshin           #+#    #+#             */
-/*   Updated: 2023/01/25 23:11:40 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/06 21:55:32 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,18 @@ int	get_size(char **str_array)
 	while (str_array[i++])
 		size++;
 	return (size);
+}
+
+t_stack	make_stack_a(int argc, char **argv)
+{
+	int		size;
+	int		*int_array;
+	char	**str_array;
+
+	str_array = get_str_array(argc, argv);
+	size = get_size(str_array);
+	int_array = get_int_array(size, argc == 2, str_array);
+	if (!is_valid(argc, size, int_array))
+		print_error("Error\n");
+	return (make_stack(int_array, size));
 }

@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 22:06:18 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/06 20:47:16 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/06 22:15:14 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,24 @@ void	print_stack(t_stack stack)
 	t_node	*node;
 
 	node = stack.top;
+	if (node)
 	do
 	{
 		ft_printf("%d\n", node->num);
 		node = node->down;
 	}
 	while (node != stack.top);
+	else
+		ft_printf("빈 스택 있음\n");
 }
 
 int	main(int argc, char **argv)
 {
-	int		size;
-	int		*int_array;
-	char	**str_array;
+	t_stack	a;
+	t_stack	b;
 
-	str_array = get_str_array(argc, argv);
-	size = get_size(str_array);
-	int_array = get_int_array(size, argc == 2, str_array);
-	if (!is_valid(argc, size, int_array))
-		print_error("Error\n");
-	push_swap(size, int_array);
+	a = make_stack_a(argc, argv);
+	b = make_stack(NULL, 0);
+	push_swap(a, b);
 	return (0);
 }
