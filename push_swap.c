@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 23:31:03 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/07 01:58:04 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/07 15:22:51 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	push_swap(t_stack a, t_stack b)
 	ft_printf("-----------------\n");
 	print_stack(a, b);
 	ft_printf("-----------------\n");
-	p(&a, &b);
+	rrr(&a, &b);
 	ft_printf("-----------------\n");
 	print_stack(a, b);
 	ft_printf("-----------------\n");
