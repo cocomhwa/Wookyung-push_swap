@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 22:06:18 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/07 01:56:31 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/07 18:38:49 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	print_stack(t_stack a, t_stack b)
 			}
 			ft_printf("\n");
 			is_first = 0;
-			if(a_node == a.top && b_node == b.top)
+			if (a_node == a.top && b_node == b.top)
 				break ;
 		}
 	}

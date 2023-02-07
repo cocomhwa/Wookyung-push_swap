@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 21:57:28 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/07 02:11:07 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/07 20:46:34 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,9 @@ t_stack	new_stack(void);
 t_stack make_stack(int *int_array, int size);
 t_stack	make_stack_a(int argc, char **argv);
 t_stack	make_stack_b(void);
+t_node	*find_min(t_stack *stack);
+void	sort(t_stack *a, t_stack *b);
+void	reverse_sort(t_stack *a, t_stack *b);
 void	add_top(int num, t_stack *stack);
 void	print_error(char *error_message);
 void	print_stack(t_stack a, t_stack b);

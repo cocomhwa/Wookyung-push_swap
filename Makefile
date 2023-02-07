@@ -6,7 +6,7 @@
 #    By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/17 19:29:57 by wooshin           #+#    #+#              #
-#    Updated: 2023/02/07 01:58:37 by wooshin          ###   ########.fr        #
+#    Updated: 2023/02/07 20:45:41 by wooshin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,12 +18,14 @@ RM			= rm -f
 SRCS		= main.c \
 			  utils.c \
 			  utils2.c \
+			  utils3.c \
 			  push_swap.c \
 			  list_func1.c \
 			  input_check.c \
 			  operation.c \
 			  rotate.c \
 			  swap.c \
+			  sort.c \
 			  push.c
 
 LIBFT_PATH	= ./library/libft
