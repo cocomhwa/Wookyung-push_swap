@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 22:06:18 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/07 18:38:49 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/08 18:57:08 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	print_stack(t_stack a, t_stack b)
 	is_first = 1;
 	a_node = a.top;
 	b_node = b.top;
+	ft_printf("-----------------\n");
 	if (a_node || b_node)
 	{
 		while (1)
@@ -42,6 +43,7 @@ void	print_stack(t_stack a, t_stack b)
 				break ;
 		}
 	}
+	ft_printf("-----------------\n");
 }
 
 int	main(int argc, char **argv)
