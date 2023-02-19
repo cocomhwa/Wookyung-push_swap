@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 21:57:28 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/08 19:06:17 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/19 22:02:57 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,14 @@ void	swap(t_stack *stack);
 void	s(t_stack *stack);
 void	push(t_stack *src, t_stack *dest);
 void	p(t_stack *src, t_stack *dest);
+void	ft_swap(int *a, int *b);
+void	sort_int_array(int *int_array, int size);
+int		get_pivot(int *int_array, int size, int bunmo, int bunza);
 int		*get_int_array(int len, int is_freeable, char **str_array);
 int		*is_valid(int argc, int size, int *int_array);
 int		check_duplication(int len, int *int_array);
 int		get_size(char **str_array);
+int		*free_int_array(int	*array);
 char	**get_str_array(int argc, char **argv);
 
 #endif
