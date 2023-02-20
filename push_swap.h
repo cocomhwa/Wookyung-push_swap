@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 21:57:28 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/19 22:02:57 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/20 15:31:54 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 typedef struct s_node
 {
 	int				num;
+	int				idx;
 	struct s_node	*up;
 	struct s_node	*down;
 }					t_node;

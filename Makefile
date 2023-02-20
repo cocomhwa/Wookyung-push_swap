@@ -6,7 +6,7 @@
 #    By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/17 19:29:57 by wooshin           #+#    #+#              #
-#    Updated: 2023/02/07 20:45:41 by wooshin          ###   ########.fr        #
+#    Updated: 2023/02/20 15:15:47 by wooshin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRCS		= main.c \
 			  utils.c \
 			  utils2.c \
 			  utils3.c \
+			  utils4.c \
 			  push_swap.c \
 			  list_func1.c \
 			  input_check.c \

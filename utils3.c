@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 18:31:40 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/08 18:54:37 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/20 15:34:41 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ t_node	*find_min(t_stack *stack)
 		if (node == stack->top)
 			break;
 	}
+	min->idx = 0;
 	return (min);
 }
 
