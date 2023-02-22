@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 23:56:41 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/08 18:25:26 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/22 20:52:32 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ void	push(t_stack *src, t_stack *dest)
 	t_node	*src_top;
 
 	add_top(src->top->num, dest);
-
 	src_top = src->top;
 	if (src->top == src->bottom)
 		src->top = NULL;

@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 17:42:48 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/22 18:35:18 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/22 20:50:54 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	get_chunk(double size)
 	double	chunk;
 
 	chunk = ((0.000000053 * (size * size)) + (0.03 * size) + 14.5);
-	ft_printf("________%d is chunk________\n", (int)chunk);
 	return ((int)chunk);
 }
 
@@ -31,9 +30,9 @@ int	is_exist_stack(t_stack *stack)
 
 int	max_in_first_half(t_stack *stack, int size)
 {
-	int	i;
-	int	half;
-	t_node *current;
+	int		i;
+	int		half;
+	t_node	*current;
 
 	i = 0;
 	half = size / 2;

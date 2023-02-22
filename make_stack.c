@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 16:23:54 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/22 16:38:33 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/22 20:51:28 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ t_stack	make_stack_a(int argc, char **argv)
 
 t_stack	make_stack_b(void)
 {
-	t_stack b;
+	t_stack	b;
 
 	b = make_stack(NULL, 0);
 	b.name = 'b';

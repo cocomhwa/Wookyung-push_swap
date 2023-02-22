@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 22:06:18 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/22 16:48:05 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/22 20:51:08 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	print_stack(t_stack a, t_stack b)
 {
 	t_node	*a_node;
 	t_node	*b_node;
-	int	is_first;
+	int		is_first;
 
 	is_first = 1;
 	a_node = a.top;
@@ -53,8 +53,6 @@ int	main(int argc, char **argv)
 
 	a = make_stack_a(argc, argv);
 	b = make_stack_b();
-	ft_printf("a is %c\n", a.name);
-	ft_printf("b is %c\n",b.name);
 	push_swap(a, b);
 	return (0);
 }

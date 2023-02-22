@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 16:57:34 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/22 18:40:01 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/22 20:50:27 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	a_to_b(t_stack *a, t_stack *b, int chunk)
 {
-	int num;
+	int	num;
 
 	num = 0;
 	while (is_exist_stack(a))
@@ -40,7 +40,7 @@ static void	a_to_b(t_stack *a, t_stack *b, int chunk)
 static void	b_to_a(t_stack *b, t_stack *a)
 {
 	int	size;
-	int max;
+	int	max;
 
 	size = a->size;
 	max = size;
