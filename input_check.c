@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 15:25:20 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/19 21:33:58 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/22 15:50:35 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,9 @@ int	*is_valid(int argc, int size, int *int_array)
 	else if (check_duplication(size, int_array) || argc < 2)
 		return (free_int_array(int_array));
 	else if (is_sorted(int_array, size))
+	{
+		free_int_array(int_array);
 		exit(1);
+	}
 	return (int_array);
 }

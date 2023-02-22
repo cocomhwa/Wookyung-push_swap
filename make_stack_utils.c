@@ -1,16 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils4.c                                           :+:      :+:    :+:   */
+/*   make_stack_utils.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/19 21:09:18 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/22 16:18:26 by wooshin          ###   ########.fr       */
+/*   Created: 2023/02/22 16:21:11 by wooshin           #+#    #+#             */
+/*   Updated: 2023/02/22 16:24:24 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	free_arrays(char **str_array)
+{
+	int	i;
+
+	i = 0;
+	while (str_array[i])
+		free(str_array[i++]);
+}
+
+char	**get_str_array(int argc, char **argv)
+{
+	if (argc == 2)
+		return (ft_split(argv[1], ' '));
+	return (argv + 1);
+}
+
+int	get_size(char **str_array)
+{
+	int	size;
+	int	i;
+
+	i = 0;
+	size = 0;
+	while (str_array[i++])
+		size++;
+	return (size);
+}
 
 int	*indexing(int *int_array, int size)
 {

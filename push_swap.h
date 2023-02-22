@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 21:57:28 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/20 15:31:54 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/22 18:24:06 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_stack
 {
 	t_node	*bottom;
 	t_node	*top;
+	int		size;
 	char	name;
 }				t_stack;
 
@@ -59,12 +60,17 @@ void	push(t_stack *src, t_stack *dest);
 void	p(t_stack *src, t_stack *dest);
 void	ft_swap(int *a, int *b);
 void	sort_int_array(int *int_array, int size);
+void	auto_sort(t_stack *a, t_stack *b);
 int		get_pivot(int *int_array, int size, int bunmo, int bunza);
 int		*get_int_array(int len, int is_freeable, char **str_array);
 int		*is_valid(int argc, int size, int *int_array);
 int		check_duplication(int len, int *int_array);
 int		get_size(char **str_array);
 int		*free_int_array(int	*array);
+int		*indexing(int *int_array, int size);
+int		get_chunk(double size);
+int		is_exist_stack(t_stack *stack);
+int		max_in_first_half(t_stack *stack, int size);
 char	**get_str_array(int argc, char **argv);
 
 #endif

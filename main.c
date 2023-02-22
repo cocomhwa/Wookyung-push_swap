@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 22:06:18 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/08 18:57:08 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/22 16:48:05 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ int	main(int argc, char **argv)
 
 	a = make_stack_a(argc, argv);
 	b = make_stack_b();
+	ft_printf("a is %c\n", a.name);
+	ft_printf("b is %c\n",b.name);
 	push_swap(a, b);
 	return (0);
 }
