@@ -1,21 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   manual_sort_utils.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/07 15:55:48 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/23 17:43:42 by wooshin          ###   ########.fr       */
+/*   Created: 2023/02/23 19:08:01 by wooshin           #+#    #+#             */
+/*   Updated: 2023/02/23 19:08:03 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	sort(t_stack *a, t_stack *b)
-{
-	if (a->size <= 5)
-		manual_sort(a, b);
-	else
-		auto_sort(a, b);
-}

@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 13:01:59 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/23 13:02:01 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/23 16:48:38 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,21 +29,21 @@ static long	to_int(const char *str)
 	result = 0;
 	while (str[i])
 	{
-		if (str[i] == 45)
+		if (str[i] == '-')
 			sign += 1;
-		if (str[i] < 48 || str[i] > 57)
+		if (str[i] < '0' || str[i] > '9')
 		{
-			if (str[i] != 45)
+			if (str[i] != '-')
 				return (2147483648);
 		}
-		if (str[i] >= 48 && str[i] <= 57)
-			result = result * 10 + (str[i] -48);
-		if (sign == 1)
-			result *= -1;
-		else if (sign > 1)
+		if (str[i] >= '0' && str[i] <= '9')
+			result = result * 10 + (str[i] -'0');
+		else if (sign > 1 || (sign == 1 && ft_strlen(str) == 1))
 			return (2147483648);
 		i++;
 	}
+	if (sign == 1)
+		result *= -1;
 	return (result);
 }
 

@@ -6,7 +6,7 @@
 #    By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/17 19:29:57 by wooshin           #+#    #+#              #
-#    Updated: 2023/02/23 13:02:08 by wooshin          ###   ########.fr        #
+#    Updated: 2023/02/23 18:04:26 by wooshin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,6 @@ SRCS		= main.c \
 			  make_stack_utils2.c \
 			  list_func1.c \
 			  input_check.c \
-			  utils3.c \
 			  push_swap.c \
 			  operation.c \
 			  rotate.c \
@@ -29,7 +28,9 @@ SRCS		= main.c \
 			  push.c \
 			  sort.c \
 			  auto_sort.c \
-			  auto_sort_utils.c
+			  auto_sort_utils.c \
+			  manual_sort.c \
+			  optimize_auto_sort.c
 
 LIBFT_PATH	= ./library/libft
 PRINTF_PATH	= ./library/ft_printf

@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 21:57:28 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/22 18:24:06 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/23 17:49:33 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void	push(t_stack *src, t_stack *dest);
 void	p(t_stack *src, t_stack *dest);
 void	ft_swap(int *a, int *b);
 void	sort_int_array(int *int_array, int size);
+void	manual_sort(t_stack *a, t_stack *b);
 void	auto_sort(t_stack *a, t_stack *b);
 int		get_pivot(int *int_array, int size, int bunmo, int bunza);
 int		*get_int_array(int len, int is_freeable, char **str_array);
@@ -71,6 +72,7 @@ int		*indexing(int *int_array, int size);
 int		get_chunk(double size);
 int		is_exist_stack(t_stack *stack);
 int		max_in_first_half(t_stack *stack, int size);
+int		rra_is_better(t_stack *stack);
 char	**get_str_array(int argc, char **argv);
 
 #endif
