@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 15:25:20 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/22 15:50:35 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/23 13:05:20 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	*free_int_array(int	*array)
 {
 	free(array);
-	return (NULL);
+	return (0);
 }
 
 static int	is_sorted(int *int_array, int size)
@@ -35,7 +35,7 @@ static int	is_sorted(int *int_array, int size)
 int	*is_valid(int argc, int size, int *int_array)
 {
 	if (!int_array)
-		return (NULL);
+		return (0);
 	else if (check_duplication(size, int_array) || argc < 2)
 		return (free_int_array(int_array));
 	else if (is_sorted(int_array, size))

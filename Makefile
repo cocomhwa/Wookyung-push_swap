@@ -6,7 +6,7 @@
 #    By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/17 19:29:57 by wooshin           #+#    #+#              #
-#    Updated: 2023/02/22 17:47:06 by wooshin          ###   ########.fr        #
+#    Updated: 2023/02/23 13:02:08 by wooshin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@ CFLAGS		= -g -Wall -Wextra -Werror
 RM			= rm -f
 
 SRCS		= main.c \
-			  utils.c \
 			  make_stack.c \
 			  make_stack_utils.c \
+			  make_stack_utils2.c \
 			  list_func1.c \
 			  input_check.c \
 			  utils3.c \
