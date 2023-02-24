@@ -3,13 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   manual_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
+/*   By: wooshin <woosin@student.42seoul.kr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 17:37:19 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/24 14:34:21 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/24 17:22:57 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+
 
 static void	sort_three_num(t_stack *a)
 {
@@ -37,9 +37,31 @@ static void	sort_three_num(t_stack *a)
 	}
 }
 
-void	sort_five_num()
+void	sort_five_num(t_stack *a, t_stack *b)
 {
-	ft_printf("hi");
+	int	i;
+
+	i = a->size;
+	while (i > 0)
+	{
+		if (a->top->num == 0 || a->top->num == 4)
+			p(b);
+		else
+			r(a);
+		i--;
+	}
+	if (b->top->num == 4)
+	{
+		p(a);
+		r(a);
+		p(a);
+	}
+	else if (b->top->num == 0)
+	{
+		p(a);
+		p(a);
+		r(a);
+	}
 }
 
 void	manual_sort(t_stack *a, t_stack *b)
