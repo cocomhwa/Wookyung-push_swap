@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 16:57:34 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/23 18:28:41 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/25 07:11:49 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ static void	a_to_b(t_stack *a, t_stack *b, int chunk, int which_rotate)
 	int	num;
 
 	num = 0;
-//	while (num < a->size)
 	while (is_exist_stack(a))
 	{
 		if (a->top->num < num)
@@ -44,10 +43,8 @@ static void	a_to_b(t_stack *a, t_stack *b, int chunk, int which_rotate)
 static void	b_to_a(t_stack *b, t_stack *a)
 {
 	int	size;
-	int	max;
 
 	size = a->size;
-	max = size;
 	while (is_exist_stack(b))
 	{
 		if (max_in_first_half(b, size))
@@ -67,11 +64,9 @@ static void	b_to_a(t_stack *b, t_stack *a)
 
 void	auto_sort(t_stack *a, t_stack *b)
 {
-	int	num;
 	int	chunk;
 	int	which_rotate;
 
-	num = 0;
 	chunk = get_chunk((double)(a->size));
 	which_rotate = rra_is_better(a);
 	a_to_b(a, b, chunk, which_rotate);

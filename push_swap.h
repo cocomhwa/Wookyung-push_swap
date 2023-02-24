@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: wooshin <woosin@student.42seoul.kr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 21:57:28 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/23 17:49:33 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/25 07:17:31 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,9 @@ t_stack	new_stack(void);
 t_stack make_stack(int *int_array, int size);
 t_stack	make_stack_a(int argc, char **argv);
 t_stack	make_stack_b(void);
-t_node	*find_min(t_stack *stack);
 void	sort(t_stack *a, t_stack *b);
-void	reverse_sort(t_stack *src, t_stack *dest);
-void	complete_sort(t_stack *src, t_stack *dest);
 void	add_top(int num, t_stack *stack);
 void	print_error(char *error_message);
-void	print_stack(t_stack a, t_stack b);
 void	free_arrays(char **str_array);
 void	push_swap(t_stack a, t_stack b);
 void	*nullguard(void *content);
@@ -58,11 +54,8 @@ void	swap(t_stack *stack);
 void	s(t_stack *stack);
 void	push(t_stack *src, t_stack *dest);
 void	p(t_stack *src, t_stack *dest);
-void	ft_swap(int *a, int *b);
-void	sort_int_array(int *int_array, int size);
 void	manual_sort(t_stack *a, t_stack *b);
 void	auto_sort(t_stack *a, t_stack *b);
-int		get_pivot(int *int_array, int size, int bunmo, int bunza);
 int		*get_int_array(int len, int is_freeable, char **str_array);
 int		*is_valid(int argc, int size, int *int_array);
 int		check_duplication(int len, int *int_array);

@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 14:32:46 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/23 16:58:33 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/25 02:53:25 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ static int	is_pyramid(t_stack *stack, int dsnd_sum, int asnd_sum)
 			return (0);
 		if (asnd_sum / dsnd_sum > 2)
 			return (0);
-		else return (1);
+		else
+			return (1);
 	}
 }
 
@@ -52,11 +53,9 @@ int	rra_is_better(t_stack *stack)
 {
 	int	descnd_sum;
 	int	ascnd_sum;
-	int	abs_num;
 
 	descnd_sum = 0;
 	ascnd_sum = 0;
-	abs_num = 0;
 	if (!is_pyramid(stack, descnd_sum, ascnd_sum))
 		return (1);
 	return (0);
