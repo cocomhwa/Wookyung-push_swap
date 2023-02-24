@@ -6,10 +6,9 @@
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 17:37:19 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/23 21:59:06 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/24 14:34:21 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "push_swap.h"
 
 static void	sort_three_num(t_stack *a)
