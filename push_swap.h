@@ -6,7 +6,7 @@
 /*   By: wooshin <woosin@student.42seoul.kr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 21:57:28 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/25 07:17:31 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/26 19:47:34 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ t_stack	new_stack(void);
 t_stack make_stack(int *int_array, int size);
 t_stack	make_stack_a(int argc, char **argv);
 t_stack	make_stack_b(void);
+void	space_check(int argc, char **argv);
 void	sort(t_stack *a, t_stack *b);
 void	add_top(int num, t_stack *stack);
 void	print_error(char *error_message);
@@ -58,7 +59,6 @@ void	manual_sort(t_stack *a, t_stack *b);
 void	auto_sort(t_stack *a, t_stack *b);
 int		*get_int_array(int len, int is_freeable, char **str_array);
 int		*is_valid(int argc, int size, int *int_array);
-int		check_duplication(int len, int *int_array);
 int		get_size(char **str_array);
 int		*free_int_array(int	*array);
 int		*indexing(int *int_array, int size);

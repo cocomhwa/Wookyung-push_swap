@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 13:01:59 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/25 02:32:19 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/26 19:29:32 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,28 +45,6 @@ static long	to_int(const char *str)
 	if (sign == 1)
 		result *= -1;
 	return (result);
-}
-
-int	check_duplication(int len, int *int_array)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	while (i < len - 1)
-	{
-		j = i + 1;
-		while (j < len)
-		{
-			if (int_array[i] == int_array[j])
-				return (1);
-			else
-				j++;
-		}
-		i++;
-	}
-	return (0);
 }
 
 int	*get_int_array(int len, int is_freeable, char **str_array)

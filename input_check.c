@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 15:25:20 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/23 13:05:20 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/26 19:50:42 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,30 @@ int	*free_int_array(int	*array)
 {
 	free(array);
 	return (0);
+}
+
+void	space_check(int argc, char **argv)
+{
+	int	i;
+	int	j;
+	int	space_count;
+
+	i = 1;
+	j = 0;
+	space_count = 0;
+	while (argv[i])
+	{
+		j = 0;
+		while (argv[i][j])
+		{
+			if (argv[i][j] == ' ')
+				space_count++;
+			j++;
+		}
+		i++;
+	}
+	if (space_count > argc - 1)
+		print_error("Error\n");
 }
 
 static int	is_sorted(int *int_array, int size)
@@ -30,6 +54,28 @@ static int	is_sorted(int *int_array, int size)
 		i--;
 	}
 	return (1);
+}
+
+static int	check_duplication(int len, int *int_array)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (i < len - 1)
+	{
+		j = i + 1;
+		while (j < len)
+		{
+			if (int_array[i] == int_array[j])
+				return (1);
+			else
+				j++;
+		}
+		i++;
+	}
+	return (0);
 }
 
 int	*is_valid(int argc, int size, int *int_array)
