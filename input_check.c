@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 15:25:20 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/26 19:50:42 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/26 20:54:15 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,6 @@ int	*free_int_array(int	*array)
 {
 	free(array);
 	return (0);
-}
-
-void	space_check(int argc, char **argv)
-{
-	int	i;
-	int	j;
-	int	space_count;
-
-	i = 1;
-	j = 0;
-	space_count = 0;
-	while (argv[i])
-	{
-		j = 0;
-		while (argv[i][j])
-		{
-			if (argv[i][j] == ' ')
-				space_count++;
-			j++;
-		}
-		i++;
-	}
-	if (space_count > argc - 1)
-		print_error("Error\n");
 }
 
 static int	is_sorted(int *int_array, int size)

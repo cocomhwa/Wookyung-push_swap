@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 13:00:54 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/26 19:48:51 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/26 20:51:40 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ void	free_arrays(char **str_array)
 
 char	**get_str_array(int argc, char **argv)
 {
-	space_check(argc, argv);
 	if (argc == 2)
 		return (ft_split(argv[1], ' '));
 	return (argv + 1);

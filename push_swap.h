@@ -6,7 +6,7 @@
 /*   By: wooshin <woosin@student.42seoul.kr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 21:57:28 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/26 19:47:34 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/26 21:12:36 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,9 @@ typedef struct s_stack
 }				t_stack;
 
 t_stack	new_stack(void);
-t_stack make_stack(int *int_array, int size);
+t_stack	make_stack(int *int_array, int size);
 t_stack	make_stack_a(int argc, char **argv);
 t_stack	make_stack_b(void);
-void	space_check(int argc, char **argv);
 void	sort(t_stack *a, t_stack *b);
 void	add_top(int num, t_stack *stack);
 void	print_error(char *error_message);
