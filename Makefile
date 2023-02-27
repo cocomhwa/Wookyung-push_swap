@@ -6,7 +6,7 @@
 #    By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/17 19:29:57 by wooshin           #+#    #+#              #
-#    Updated: 2023/02/23 18:04:26 by wooshin          ###   ########.fr        #
+#    Updated: 2023/02/27 13:03:20 by wooshin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,22 +15,22 @@ CC			= cc
 CFLAGS		= -g -Wall -Wextra -Werror
 RM			= rm -f
 
-SRCS		= main.c \
+SRCS		= auto_sort.c \
+			  auto_sort_utils.c \
+			  input_check.c \
+			  list_func1.c \
+			  main.c \
 			  make_stack.c \
 			  make_stack_utils.c \
 			  make_stack_utils2.c \
-			  list_func1.c \
-			  input_check.c \
-			  push_swap.c \
-			  operation.c \
-			  rotate.c \
-			  swap.c \
-			  push.c \
-			  sort.c \
-			  auto_sort.c \
-			  auto_sort_utils.c \
 			  manual_sort.c \
-			  optimize_auto_sort.c
+			  operation.c \
+			  optimize_auto_sort.c \
+			  push.c \
+			  push_swap.c \
+			  rotate.c \
+			  sort.c \
+			  swap.c
 
 LIBFT_PATH	= ./library/libft
 PRINTF_PATH	= ./library/ft_printf
