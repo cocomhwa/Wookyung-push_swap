@@ -6,7 +6,7 @@
 #    By: wooshin <wooshin@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/17 19:29:57 by wooshin           #+#    #+#              #
-#    Updated: 2023/02/27 13:03:20 by wooshin          ###   ########.fr        #
+#    Updated: 2023/02/27 13:15:09 by wooshin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,7 @@ clean :
 fclean : clean
 	$(RM) $(NAME)
 	$(MAKE) -C $(PRINTF_PATH) fclean
-	$(MAKE) -C $(LIBFT_PATH) clean
+	$(MAKE) -C $(LIBFT_PATH) fclean
 re :
 	make fclean
 	make all
