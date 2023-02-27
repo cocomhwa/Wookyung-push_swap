@@ -6,10 +6,11 @@
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 13:01:59 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/26 19:29:32 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/02/27 17:25:57 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "library/libft/libft.h"
 #include "push_swap.h"
 
 void	print_error(char *error_message)
@@ -60,7 +61,7 @@ int	*get_int_array(int len, int is_freeable, char **str_array)
 	while (i < len)
 	{
 		num = to_int(str_array[i]);
-		if (num > 2147483647 || num < -2147483648)
+		if (num > 2147483647 || num < -2147483648 || !*(str_array[i]))
 		{
 			free(int_array);
 			return (0);
