@@ -6,7 +6,7 @@
 /*   By: wooshin <wooshin@student.42seoul.k>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 13:01:59 by wooshin           #+#    #+#             */
-/*   Updated: 2023/02/27 17:25:57 by wooshin          ###   ########.fr       */
+/*   Updated: 2023/03/05 13:44:55 by wooshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static long	to_int(const char *str)
 	i = 0;
 	sign = 0;
 	result = 0;
-	while (str[i])
+	while (str[i] && i < 12)
 	{
 		if (str[i] == '-')
 			sign += 1;
